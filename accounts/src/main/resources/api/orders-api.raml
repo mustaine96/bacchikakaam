@@ -1,0 +1,73 @@
+#%RAML 1.0
+baseUri: https://mocksvc.mulesoft.com/mocks/6ef8d64e-573d-4382-b5a5-08c5a08a9729 # 
+version: v1
+title: Orders API
+
+/orders:
+  /{customerId}:
+    get:
+      displayName: Retrive Customer Orders
+      description: Lists the user orders
+      queryParameters:
+        Order No:
+          required: false
+          type: integer
+      responses:
+        200:
+          body:
+            application/json:
+              example : !include examples//orders_collection.raml
+    
+    post:
+      displayName: Accept Order
+      description: Create a new Order
+      body:
+        application/json:
+          type: !include schemas/orders.json
+          example: !include examples/create_order.raml
+      responses:
+        201:
+          body:
+            application/json:
+              example: !include examples/response1.raml
+        400:
+          body:
+            application/json:
+              example: !include examples/response2.raml
+                
+        404:
+          body:
+            application/json:
+              example: !include examples//response3.raml 
+  
+  /{orderId}:
+    get:
+      displayName: retrive Orders
+      description: retrive the orders depending on orderId
+      responses:
+       200:
+        body:
+          application/json:
+            example: !include examples/orderID_responses.raml
+          
+    delete:
+      displayName: Delete customer order
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include examples/response4.raml
+        400:
+          body:
+            application/json:
+              example: !include examples/response5.raml
+                
+               
+                             
+         
+        
+        
+
+                
+
+                

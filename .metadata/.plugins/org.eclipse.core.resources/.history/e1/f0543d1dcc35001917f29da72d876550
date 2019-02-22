@@ -1,0 +1,10 @@
+http:
+  port: "8081"
+  
+american:
+  host : "anypoint.mulesoft.training"
+  port : "443"
+  basepath : "/mocking/api/v1/links/4b7ce309-23c8-4c22-aa3f-b11b7a75282d"
+  protocol : "HTTPS"
+  clientid : "b4c43bd9044b46778321286217c6c8f2"
+  clientsecret : "c409C3e92D614399B40b3B0857dDa591"

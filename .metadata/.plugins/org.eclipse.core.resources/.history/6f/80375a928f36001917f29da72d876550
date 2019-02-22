@@ -1,0 +1,10 @@
+http:
+  port: "8081"
+  
+american:
+  host: "http://training-american-ws-gsn.us-e2.cloudhub.io/api"
+  port: "443"
+  basepath: "/"
+  protocol: "HTTPS"
+  client_id : ""
+  client_secret : ""

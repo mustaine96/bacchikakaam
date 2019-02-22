@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:american-flights-api="http://www.mulesoft.org/schema/mule/american-flights-api" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/american-flights-api http://www.mulesoft.org/schema/mule/american-flights-api/current/mule-american-flights-api.xsd">
+	<flow name="implementationFlow" doc:id="c912c498-865e-4719-ac70-3d1b1be589b9" >
+		<http:listener doc:name="GET /american" doc:id="715da3a4-d8b4-4478-88de-71c41fdb9bc1" config-ref="HTTP_Listener_config" path="/american" allowedMethods="GET"/>
+		<american-flights-api:get-flights doc:name="Get flights" doc:id="ce61c562-b534-46ba-bfcc-a6e6076e3157" client-id="${american.clientid}" client-secret="${american.clientsecret"/>
+	</flow>
+</mule>

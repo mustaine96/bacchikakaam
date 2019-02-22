@@ -1,0 +1,4 @@
+authenticated.users=[{"id"\:"f00ac29f-a3c4-4b13-86fb-f40b63fc0157","token"\:"6a8eeb48-4335-43dc-804e-14f38de9394f","userId"\:"saigandh","refreshToken"\:"","baseUrl"\:"https\://anypoint.mulesoft.com/"},{"id"\:"75b0a5c3-718e-45b4-a9a7-d2ea078bee2d","token"\:"dba1ea25-8a42-4d3c-9522-e8228d233521","userId"\:"vipul666","refreshToken"\:"","baseUrl"\:"https\://anypoint.mulesoft.com/"}]
+current.token=6a8eeb48-4335-43dc-804e-14f38de9394f
+current.user=saigandh
+eclipse.preferences.version=1

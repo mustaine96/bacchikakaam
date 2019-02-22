@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:american-flights-api="http://www.mulesoft.org/schema/mule/american-flights-api" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/american-flights-api http://www.mulesoft.org/schema/mule/american-flights-api/current/mule-american-flights-api.xsd">
+	<american-flights-api:config name="American_Flights_API_Config1" doc:name="American Flights API Config" doc:id="c3f5d9f5-1f22-4ef7-8965-3d32a1d311ca" />
+	<flow name="implementationFlow" doc:id="5e1b878e-5095-4165-9d7a-14e2f7f1054b" >
+		<http:listener doc:name="Listener" doc:id="1dbc65ad-6e4c-44bd-8d53-2d4b6f738464" config-ref="HTTP_Listener_config" path="/american"/>
+		<american-flights-api:get-flights doc:name="Get flights" doc:id="b9257a32-29e9-46ab-bdc7-b325fb75fe1d" />
+	</flow>
+</mule>

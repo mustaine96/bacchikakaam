@@ -1,0 +1,16 @@
+http:
+  port: "8081"
+  
+american:
+  host: "training4-american-api-naina.cloudhub.io"
+  port: "80"
+  basepath: "/"
+  protocol: "HTTP"
+  client_id: ""
+  client_secret: ""
+  
+training:
+  host: "mu.learn.mulesoft.com"
+  port: "80"
+  basepath: "/"
+  protocol: "HTTP"
